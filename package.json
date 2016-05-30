@@ -1,0 +1,47 @@
+{
+  "name": "arduino1010",
+  "version": "1.0.0",
+  "description": "A popular game \"1010!\" controlled by Arduino.",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pomek/Arduino1010.git"
+  },
+  "keywords": [
+    "Arduino",
+    "1010!",
+    "Sockets"
+  ],
+  "author": "Kamil Piechaczek <github@pomek.pl>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/pomek/Arduino1010/issues"
+  },
+  "homepage": "https://github.com/pomek/Arduino1010#readme",
+  "devDependencies": {
+    "browser-sync": "^2.12.7",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-eslint": "^2.0.0",
+    "gulp-inject": "^4.0.0",
+    "gulp-rollup": "^1.9.0",
+    "gulp-sass": "^2.3.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.9",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-jasmine": "^0.3.8",
+    "karma-jasmine-jquery": "^0.1.1",
+    "karma-jasmine-matchers": "^2.0.2",
+    "rollup": "^0.26.2",
+    "rollup-plugin-commonjs": "^2.2.1",
+    "rollup-plugin-node-resolve": "^1.5.0",
+    "run-sequence": "^1.1.5"
+  },
+  "dependencies": {
+    "event-emitter": "^0.3.4",
+    "johnny-five": "^0.9.44",
+    "socket.io": "^1.4.5"
+  }
+}

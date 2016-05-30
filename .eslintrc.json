@@ -1,0 +1,26 @@
+{
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "globals": {
+    "describe": true,
+    "beforeEach": true,
+    "it": true,
+    "expect": true,
+    "jasmine": true,
+    "spyOn": true,
+
+    "Map": true,
+    "WeakMap": true,
+    "Symbol": true,
+    "document": true,
+    "window": true,
+    "Path2D": true,
+    "io": true
+  },
+  "rules": {
+    "semi": 2
+  }
+}

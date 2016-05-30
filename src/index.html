@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Arduino 1010!</title>
+    <!-- inject:css -->
+    <!-- endinject -->
+</head>
+<body>
+
+<div class="js-loader layer">
+    <div class="loader">
+        <div class="loader__bar"></div>
+        <p class="loader__title">Waiting for Arduino</p>
+    </div>
+</div>
+
+<div class="js-game-over layer layer--hide">
+    <p class="game-over__title">Game Over <span class="game-over__score js-score"></span></p>
+</div>
+
+<div class="wrapper">
+    <canvas id="arduino1010" width="950" height="620"></canvas>
+</div>
+
+<script src="node_modules/socket.io-client/socket.io.js"></script>
+<!-- inject:js -->
+<!-- endinject -->
+</body>
+</html>
