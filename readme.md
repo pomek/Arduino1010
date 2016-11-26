@@ -1,18 +1,17 @@
 # Arduino 1010!
 
-Implementation a popular game "1010!" made in JavaScript (fully ECMAScript 2015) 
-and controlled by Arduino.
+An implementation of the popular game "1010!" in JavaScript (fully ECMAScript 2015) controlled by Arduino.
 
-## How it works?
+## How does it work?
 
-It's really simple. Arduino and web server are connected via [web sockets](http://socket.io/).
-Any interaction of user with the device is forwarded to Web via a socket. Server (after receiving the socket) processes the request and make something in game.
+It's really simple. Arduino and Server are connected via [Web Sckets](http://socket.io/).
+Any interaction of a user with the device is forwarded to the Server via a socket. Server after receiving the socket processes the request and make something in the game.
 
-When user can do something in the game, green LED will be blinking. If user cannot do anything, two red LEDs will be blink alternately.
+When the user is able to do something in the game, green LED will be blinking. In the other case two, red LEDs will be blink alternately.
 
 ## How can I run it?
 
-**Requirements:**
+**Requirements**
 
 * [Arduino Leonardo](https://www.arduino.cc/en/Main/ArduinoBoardLeonardo),
 * [NodeJS](https://nodejs.org/en/) (_tested on 6.1_),
@@ -20,65 +19,64 @@ When user can do something in the game, green LED will be blinking. If user cann
 * [Arduino IDE](https://www.arduino.cc/en/Main/Software) _(needs for load **Arduino StandardFirmata**)_,
 * Basic knowledge about [Command Line Interface](https://en.wikipedia.org/wiki/Command-line_interface).
 
-Please follow step by step:
+Follow step by step an instruction below:
 
-### Build Game Controller
+### Build a Game Controller
 
 1. Prepare:
- - 6 [LEDs](https://www.google.pl/search?q=LED), 
- - 10 [resistor](https://www.google.pl/search?q=resistor+330+ohm) (330 Ω), 
- - 4 buttons (prefered ["Tactical Switch"](https://www.google.pl/search?q=Tactical+Switch)), 
+ - 6x [LEDs](https://www.google.pl/search?q=LED), 
+ - 10x [resistors](https://www.google.pl/search?q=resistor+330+ohm) 330 Ω,  
+ - 4x buttons (prefered ["Tactical Switch"](https://www.google.pl/search?q=Tactical+Switch)), 
  - [Thumb Joystick](https://www.google.pl/search?q=thumb+joystick)
 2. Check out the [**Circuit diagram**](#circuit-diagram)
 3. Based on [**Breadboard preview**](#breadboard-preview) - build *Game Controller*
 
-### Prepare Arduino
+### Prepare an Arduino
 
-Please follow [the instruction](https://github.com/rwaldron/johnny-five/wiki/Getting-Started#trouble-shooting).
+Please follow [an instruction](https://github.com/rwaldron/johnny-five/wiki/Getting-Started#trouble-shooting).
 
-### Prepare project
+### Prepare a project
 
-1. Clone this repository (`git clone git@github.com:pomek/Arduino1010.git`)
-2. Install required dependencies (`npm install`)
-3. Connect Arduino with computer
-4. Run the game (`npm run gulp`)
+1. Clone this repository (`git clone git@github.com:pomek/Arduino1010.git`),
+2. Install dependencies (`npm install`),
+3. Connect the Arduino with a computer,
+4. Run the game (`npm run gulp`).
 
-#### Breadboard preview
+#### A breadboard preview
 
 ![Breadboard preview](docs/Arduino1010_bb.png)
 
-#### Circuit diagram
+#### A circuit diagram
 
 ![Circuit diagram](docs/Arduino1010_schem.png)
 
-## How to play?
+## Terms of the game
 
-Based on breadboard above:
+Based on the breadboard above:
 
 * Buttons (from left to right) mean which shape will be active (after pressed),
-* A LED above the button mean which shape is active,
+* A LED above a button means which shape is active now,
 * If you press the same button two times - shape will be indeterminate,
 * After paste a shape, a LED will switch off,
-* If game is over - two LEDs will be blink alternately, otherwise - a green LED will be blinking
+* If game is over - two LEDs will be blink alternately, otherwise - a green LED will be blinking,
 * After choose a shape - you can choose a place to paste (use the joystick)
-* If you want to paste the shape - press down the joystick
-* If you want to restart game - press button at right side
+* If you want to paste the shape - press down the joystick,
+* If you want to restart game - press button at right side.
 
 ## To do
 
-I'm open for any improvements of the game. If you have any idea, but you 
-don't want or you cannot how do this, please leave me an issue.
+I'm open for any improvements of the game. If you have any idea, but you don't want or you cannot do this, please leave me an issue.
 
 My road map contains following points:
 
 - [ ] Add display [LCD HD44780](https://www.google.pl/search?q=LCD+HD44780),
 - [ ] Easy way to add custom shapes,
 - [ ] Try to optimize used pins,
-- [ ] In the future: build a device (which Computer won't be needed).
+- [ ] In the future: build a device (the computer won't be needed).
 
 ## Development
 
-If you want to do anything with the game, please follow rules below:
+If you want to do anything with the game, please follow the terms below:
 
 * Each change breadboard or circuit diagram should be updated (use [Fritzing](http://fritzing.org/home/)),
 * Each change of code should be tested (unit tests),
